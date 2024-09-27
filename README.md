@@ -8,8 +8,8 @@ The easiest and fastest way to create any type of file on mac, directly from Fin
 This app uses AppleScript to locate you current selected folder, check if its empty, and convert it to a file. This works with any filename, or extension - except dotfiles. Apple doesn't like those.
 
 ## Installation
-1. Download the app
-2. Drag it to you Applications folder
+1. Download the app from the [releases](https://github.com/Tmate6/NewFolderFile/releases/tag/1.2) page.
+2. Drag it into your Applications folder
 3. When opening, a popup will tell you its from an unidentified developer. To bypass this, go to
 
      `Settings -> Privacy & Security -> Click "Open Anyway"`
