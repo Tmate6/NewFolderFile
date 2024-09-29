@@ -15,6 +15,8 @@ struct ContentView: View {
     @State var age: Int = -1
     @State var ageString: String = "-1"
     
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         VStack {
             HStack {
@@ -58,11 +60,14 @@ struct ContentView: View {
                 Spacer()
                 Spacer()
             }
-            .padding(.bottom)
             
-            Toggle(isOn: $ageToggle, label: {
-                Text("Check folder age before converting")
-            })
+            Toggle("Launch at login", isOn: Binding(
+                get: { appState.isLoginItemEnabled },
+                set: { _ in appState.toggleLoginItem() }
+            ))
+            .padding(.bottom, 4)
+            
+            Toggle("Check folder age before converting", isOn: $ageToggle)
             
             if ageToggle {
                 HStack {
